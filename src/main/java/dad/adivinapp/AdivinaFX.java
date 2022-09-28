@@ -72,22 +72,23 @@ public class AdivinaFX extends Application{
 		numIntroducido = Integer.parseInt(numeroText.getText());
 					
 		if(numIntroducido < numAleat) {
+			contador++;
 			Alert alertMayor = new Alert(AlertType.WARNING);
 			alertMayor.setHeaderText("¡Has fallado!");
 			alertMayor.setContentText("El número a acertar es mayor que "+numIntroducido+".\n Vuelve a intentarlo.");
 			alertMayor.showAndWait();
-			contador++;
 		}
 		
 		if(numIntroducido > numAleat) {
+			contador++;
 			Alert alertMenor = new Alert(AlertType.WARNING);
 			alertMenor.setHeaderText("¡Has fallado!");
 			alertMenor.setContentText("El número a acertar es menor que "+numIntroducido+".\n Vuelve a intentarlo.");
 			alertMenor.showAndWait();
-			contador++;
 		}
 		
 		if(numIntroducido == numAleat) {
+			contador++;
 			Alert alertAcierto = new Alert(AlertType.INFORMATION);
 			alertAcierto.setHeaderText("¡Has ganado!");
 			alertAcierto.setContentText("Solo has necesitado "+contador+" intentos.\n Vuelve a jugar y hazlo mejor.");
